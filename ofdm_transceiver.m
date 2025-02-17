@@ -148,7 +148,7 @@ for snr_idx = 1: length(SNR_dB)
         rx_data_symbols = symbol ./ H_est;
         % removing the pilots
         data_positions = setdiff(1:length(symbol), pilot_positions);
-        rx_symbols_cur = symbol(data_positions);
+        rx_symbols_cur = rx_data_symbols(data_positions);
         rx_symbols = [rx_symbols;rx_symbols_cur];
     end
     
